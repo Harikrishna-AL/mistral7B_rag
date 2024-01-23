@@ -18,7 +18,7 @@ class Mistral7BChat:
             "prompt": input_text,
             }
     
-        response = requests.post(self.api_endpoint, data=form_data, headers=self.headers)
+        response = requests.post(self.api_endpoint, json=form_data, headers=self.headers)
 
         if response.status_code == 200:
             output_text = response.text
