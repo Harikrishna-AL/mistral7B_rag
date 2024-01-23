@@ -22,6 +22,7 @@ class Mistral7BChat:
 
         if response.status_code == 200:
             output_text = response.text
+            output_text = output_text.strip('"')
             # self.chat_history.append({"user": input_text, "mistral_7b": output_text})
             return output_text
         else:
