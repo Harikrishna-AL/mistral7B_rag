@@ -21,7 +21,7 @@ class Mistral7BChat:
         response = requests.post(self.api_endpoint, json=form_data, headers=self.headers)
 
         if response.status_code == 200:
-            output_text = response.__str__()
+            output_text = response.json().__str__()
             # output_text = output_text.strip('"')
             # output_text = output_text.replace("\\n", "\n")
             # output_text = black.format_str(output_text, mode=black.FileMode())
