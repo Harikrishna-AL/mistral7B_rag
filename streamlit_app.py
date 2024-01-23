@@ -23,7 +23,7 @@ class Mistral7BChat:
         if response.status_code == 200:
             output_text = response.text
             output_text = output_text.strip('"')
-            output_text = output_text.replace("\n", " ")
+            output_text = output_text.replace("\\n", "\n")
             output_text = black.format_str(output_text, mode=black.FileMode())
             # self.chat_history.append({"user": input_text, "mistral_7b": output_text})
             return output_text
