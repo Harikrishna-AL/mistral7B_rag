@@ -9,7 +9,7 @@ def chat_ui(prompt,response):
 
 class Mistral7BChat:
     def __init__(self):
-        self.api_endpoint = "https://a8qo11ogw37imm-5000.proxy.runpod.net/generate/"
+        self.api_endpoint = "https://0j2j4qy02igmz2-5000.proxy.runpod.net/generate/"
         self.headers = {"Content-Type": "application/json"}
         # self.chat_history = []
 
